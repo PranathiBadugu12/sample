@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { MDBNotification,MDBContainer } from "mdbreact";
+import bell from '../images/bell.png'
 class ReduxnotificationCenter extends Component {
     constructor(props) {
         super(props);
@@ -24,7 +25,7 @@ class ReduxnotificationCenter extends Component {
   render() {
     return (
         <div>
-        <button to="/notif" onClick={() => {this.wrapperRef.current.style.display="block";}}>Notify</button>
+        <button  style={{border: "none",outline:"none"}}onClick={() => {this.wrapperRef.current.style.display="block";}}><img src={bell} width="20px" height="20px" alt="notify"/></button>
         <div ref={this.wrapperRef} style={{display: "none" }}>
         
         <MDBContainer 
@@ -33,7 +34,7 @@ class ReduxnotificationCenter extends Component {
           width: "auto",
           position: "fixed",
           top: "50px",
-          right: "100px",
+          right: "0px",
           zIndex: 9999
         }}
       >
