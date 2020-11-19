@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import { MDBNotification,MDBContainer } from "mdbreact";
 import bell from '../images/bell.png'
 class ReduxnotificationCenter extends Component {
     constructor(props) {
@@ -26,51 +25,60 @@ class ReduxnotificationCenter extends Component {
     return (
         <div>
         <button  style={{border: "none",outline:"none"}}onClick={() => {this.wrapperRef.current.style.display="block";}}><img src={bell} width="20px" height="20px" alt="notify"/></button>
-        <div ref={this.wrapperRef} style={{display: "none" }}>
-        
-        <MDBContainer 
-        // Edit this style according to the navbar
-        style={{
-          width: "auto",
-          position: "fixed",
-          top: "50px",
-          right: "0px",
-          zIndex: 9999
-        }}
-      >
-      <MDBNotification
-        // by default = ∞ ms
-        bodyClassName="p-2 font-weight-bold white-text"
-        className="stylish-color-dark"
-        closeClassName="blue-grey-text"
-        fade
-        icon="bell"
-        iconClassName="blue-grey-text"
-        message="Hello, world! This is a toast message."
-        show
-        text="11 mins ago"
-        title="Bootstrap"
-        titleClassName="elegant-color-dark white-text"
-       
-      />
-      <MDBNotification
-        // by default = ∞ ms
-        bodyClassName="p-2 font-weight-bold white-text"
-        className="stylish-color-dark"
-        closeClassName="blue-grey-text"
-        fade
-        icon="bell"
-        iconClassName="blue-grey-text"
-        message="Hello, world! This is a toast message."
-        show
-        text="11 mins ago"
-        title="Bootstrap"
-        titleClassName="elegant-color-dark white-text"
-        
-      />
-     </MDBContainer>
-     </div>
-     </div>
+        <div ref={this.wrapperRef}  style={{
+            width: "60%",
+            position: "absolute",
+            top: "60px",
+            left:"750px",
+            display:"none"
+          }}>
+        <div class="row">
+    <div class="col-md-6 col-xs-12 col-md-offset-3">
+      <div class="panel">
+        <div class="panel-body">
+          <ul class="list-group list-group-dividered list-group-full">
+             {/* <!--Start of notif 1--> */}
+            <li class="list-group-item">
+              <div class="media">
+                 
+                <div class="media-body">
+                 
+                  <small class="text-muted pull-right">Just now</small>
+                  <h4 class="media-heading">@Ramon Dunn</h4>
+                  <div>Lorem ipsum Veniam aliquip</div>
+                </div>
+              </div>
+            </li>
+             {/* <!--End of notif 1--> */}
+             <li class="list-group-item">
+              <div class="media">
+                 
+                <div class="media-body">
+                 
+                  <small class="text-muted pull-right">Just now</small>
+                  <h4 class="media-heading">@Ramon Dunn</h4>
+                  <div>Lorem ipsum Veniam aliquip</div>
+                </div>
+              </div>
+            </li>
+            <li class="list-group-item">
+              <div class="media">
+                 
+                <div class="media-body">
+                 
+                  <small class="text-muted pull-right">Just now</small>
+                  <h4 class="media-heading">@Ramon Dunn</h4>
+                  <div>Lorem ipsum Veniam aliquip</div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+</div>
+        </div>
+        </div>
      
     );
   }
